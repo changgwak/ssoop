@@ -9,13 +9,13 @@ void foo(int a)
 
 // void(*f1)(int) : f1 위치에 "함수이름()"
 
-void(* goo() )(int)
+void(* goo(int, int) )(int)
 {
 	return &foo;
 }
 
 // 후위 반환 타입으로 하면 훨씬 보기 좋습니다.
-auto hoo() -> void(*)(int)
+auto hoo(int, int) -> void(*)(int)
 {
 	return &foo;
 }
