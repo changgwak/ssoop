@@ -4,7 +4,7 @@
 using namespace std;
 
 // #1. C++ 표준의 모든 요소는 "std" 라는 namespace 안에 있습니다.
-// #2. 
+// #2. using namespace std 의 위험성!! (이름 충돌)
 
 int count = 10;
 
