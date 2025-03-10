@@ -25,8 +25,13 @@ int main()
 	// #3. auto 는 생각보다 어렵습니다.
 	const int c = 10;
 
-	auto a = c; // 1. int a = c;
+	auto a = c; // 1. int a = c;    =>> ok
 				// 2. const int a = c;
+
+	// auto 가 타입을 추론하는 정확한 알고리즘은 꽤 복잡합니다.
+	// => 많은 C++ 문법을알아야 합니다.
+	// => 지금은 "우변의 const, volatile, reference" 를 제거하고 결정
+	//    정도 알아 두세요, reference 는 오늘 마지막 시간에. 
 }
 
 
