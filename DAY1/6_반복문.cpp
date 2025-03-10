@@ -9,8 +9,10 @@ int main()
 	for (int i = 0; i < 10; i++)
 		std::cout << x[i] << std::endl;
 
-	// C++11 의 새로운 for 문
-	for (int e : x)
+	// C++11 의 새로운 for 문 - ranged-for 라는 이름을 가진 문법
+	// Python : for e in x
+	// C#     : foreach var e in x
+	for (auto e : x)
 	{
 		std::cout << e << std::endl;
 	}
