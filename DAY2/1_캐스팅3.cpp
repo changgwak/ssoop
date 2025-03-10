@@ -21,7 +21,10 @@ int main()
 
 
 	// #3. reinterpret_cast 는 위 용도위에는 사용할수 없습니다.
+	// double => int
 	int n1 = d; // ok. 하지만 경고
 	int n2 = reinterpret_cast<int>(d); // error
+							// 용도에 맞지 않는다!!
+	int n3 = static_cast<int>(d); // ok 
 }
 
