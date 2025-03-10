@@ -30,5 +30,8 @@ int main()
 
 	*p1 = 20;
 
-	std::cout << c << std::endl; // ???
+	std::cout << c << std::endl; // 10
+	std::cout << *p1 << std::endl; // 20 인데..
+				// => 컴파일러마다 다를수 있습니다.
+				// => undefined behavior
 }
