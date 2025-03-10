@@ -4,6 +4,7 @@
 template<typename T1, typename T2>
 auto Add1(T1 a, T2 b) -> decltype(a + b)
 {
+	if (b == 0) return a;
 	return a + b;
 }
 
