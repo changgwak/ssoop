@@ -5,6 +5,7 @@ using namespace std;
 
 // #1. C++ 표준의 모든 요소는 "std" 라는 namespace 안에 있습니다.
 // #2. using namespace std 의 위험성!! (이름 충돌)
+// #3. std::min 같은 표준함수는 대부분 <algorithm> 헤더에 있습니다.
 
 int count = 10;
 
