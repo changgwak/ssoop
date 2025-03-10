@@ -32,9 +32,18 @@ int main()
 
 
 	// int* => double* 로 변경
+	// => 위험한 작업이고, 일반적인 프로그래밍에서는 필요 없는 작업이다.
+	// => 그래서, static_cast 는 허용 안함
+	// => 만약 필요 했다면, 전용 캐스팅을 사용해라!!
 	double* p4 = (double*)&n; // ok. C-style 캐스팅은 허용
-	double* p5 = static_cast<double*>(&n); // ok. C-style 캐스팅은 허용
+	double* p5 = static_cast<double*>(&n); // error
 
 
+	double* p6 = reinterpret_cast<double*>(&n); // ok
+
+	// 하지만 절대 아래 처럼사용하면 안됩니다.
+	*p6 = 3.4;
+
+	// 개발자 요청이므로 캐스팅은 허용하지만, 주의해서 사용해야 합니다.
 }
 
