@@ -16,4 +16,16 @@ int main()
 	int* p3 = nullptr; // ok 
 //	int  n4 = nullptr; // error. nullptr 은 포인터 초기화에만 사용 가능.
 
+	// C/C++의 모든 리터럴은 타입이 있습니다
+	// 3 : int
+	// 3.4 : double
+	// nullptr : std::nullptr_t 라는 타입
+
+	// 문법 : std::nullptr_t 타입은 모든 포인터 타입으로 암시적 형변환 된다.
+	std::nullptr_t a = nullptr;
+	int* p5 = a; // ok. 결국 a 가 nullptr
+
+
+	// C#도 null 이라는 키워드가 있는데..
+	// => C# 진영의 문법은 null 은 타입이 없는 특수한 키워드다
 }
