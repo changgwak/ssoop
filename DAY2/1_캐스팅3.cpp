@@ -22,6 +22,6 @@ int main()
 
 	// #3. reinterpret_cast 는 위 용도위에는 사용할수 없습니다.
 	int n1 = d; // ok. 하지만 경고
-	int n2 = reinterpret_cast<int>(n); // error
+	int n2 = reinterpret_cast<int>(d); // error
 }
 
