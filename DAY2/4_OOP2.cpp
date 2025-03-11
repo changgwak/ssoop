@@ -12,12 +12,12 @@ struct Rect
 
 // 이제 코드에서 사각형이 필요하면 "int*4" 로하지 말고 "Rect" 사용
 
-int getRectArea(Rect rc)
+int getRectArea(const Rect& rc)
 {
 	return (rc.right - rc.left) * (rc.bottom - rc.top);
 }
 
-void drawRect(Rect rc)
+void drawRect(const Rect& rc)
 {
 	std::cout << "draw rect" << std::endl;
 }
@@ -25,6 +25,7 @@ void drawRect(Rect rc)
 int main()
 {
 	Rect rc = { 1,1, 10,10 };
+
 	int n1 = getRectArea(rc);
 	drawRect(rc);
 
