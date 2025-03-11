@@ -25,6 +25,6 @@ int main()
 	int n1 = d; // ok. 하지만 경고
 	int n2 = reinterpret_cast<int>(d); // error
 							// 용도에 맞지 않는다!!
-	int n3 = static_cast<int>(d); // ok 
+	int n3 = static_cast<int>(d); // ok. 경고도 없음. 
 }
 
