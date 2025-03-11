@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <algorithm>
 
 // Swap를 만들어 봅시다.
 // 1. C 버전
@@ -13,7 +14,8 @@ void Swap(int* a, int* b)
 // #2. 함수가 아닌 함수를 만드는 틀(template) 로 작성
 // #3. 성능향상을 위해 inline 함수로
 // #4. 이름 충돌을 막기위해 namespace 안에 제공
-
+// #5. 이미 표준에 std::swap 이 있습니다. 아래와 유사하게 구현
+//     <algorithm> 헤더
 namespace Utils
 {
 	template<typename T>
@@ -24,11 +26,12 @@ namespace Utils
 		b = tmp;
 	}
 }
-
 int main()
 {
 	int x = 3, y = 2;
 	Utils::Swap(x, y);
+	std::swap(x, y);
+
 
 	std::cout << x << std::endl;
 	std::cout << y << std::endl;
