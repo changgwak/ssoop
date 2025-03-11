@@ -24,7 +24,6 @@ public:
 
 int main()
 {
-	int x[4];
 	Vector v(4, 0);
 
 	v.at(0) = 10;
