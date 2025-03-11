@@ -45,3 +45,7 @@ Person2 p2{ "kim", 20 };
 // => 대입이 아닌 진짜 초기화(생성자로 초기화 한것)
 
 
+// std::string 은 실제 클래스이름이 아닌 alias 입니다.
+// => 실제 클래스 이름은 std::basic_string 인데, 복잡한 템플릿 입니다.
+//using string = std::basic_string<char, std::char_traits<char>, std::allocator<char>>;
+
