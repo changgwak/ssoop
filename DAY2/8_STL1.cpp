@@ -1,6 +1,6 @@
 // 8_STL1.cpp
 #include <iostream>
-#include <string>
+#include <string> // std::string 타입을 위한 헤더!
 
 int main()
 {
