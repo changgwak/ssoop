@@ -33,6 +33,11 @@ int main()
 			   // 우리가 지원하려면 연산자 재정의 필요(5일차)
 
 	v.at(0) = 10;
+	v.at(1) = 20;
 
-	std::cout << v.at(0) << std::endl;
+	std::cout << v.at(0) << std::endl; // 10
+	std::cout << v.at(1) << std::endl; // 20
+	std::cout << v.at(2) << std::endl; // 0
 }
+
+
