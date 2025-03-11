@@ -14,6 +14,26 @@
 
 
 // #2. 객체지향 프로그래밍 개념과 class 문법 7~8시간 정도
+// 
+// => 프로그램에서 필요한 타입을 먼저 만들자
+//   (std::vector, std::string 같은 타입이 있으니 편리하다)
+
+// => 안전하고, 사용하기 쉬운 타입을 만들기 위해 필요한 문법을 알아야 한다.
+
+// => 1. private, public
+// => 2. 생성자, 소멸자
+
+// => 3. member initializer list
+
+// => 4. this
+
+// => 5. const member function
+
+// => 6. static member
+
+
+
+
 
 
 // #3. 상속과 객체지향 디자인 - 4 ~ 5시간 정도
