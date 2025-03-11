@@ -33,9 +33,9 @@ int main()
 //    => void foo(const Rect& rc)
 
 
-// 2. 인자의 값을 수정하려고 합니다.(in out paramter
+// 2. 인자의 값을 수정하려고 합니다.(in out paramter)
 //    => 포인터   사용 : void inc1(int* p) { ++(*p);}
-//    => 레퍼런스 사용 : void inc2(int& t) { ++r;}
+//    => 레퍼런스 사용 : void inc2(int& r) { ++r;}
 
 // => 레퍼런스 권장. 안전하고, 가독성이 좋은 코드
 
