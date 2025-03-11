@@ -15,11 +15,11 @@ public:
 	void resize(int newsize);
 };
 
-
-
-Vector::Vector(int size, int value = 0)
+// 초기화 리스트는 구현부에서 작성
+Vector::Vector(int size, int value /*= 0*/) : sz{size}
 {
-	sz = size;
+//	sz = size;
+
 	ptr = new int[sz];
 
 	for (int i = 0; i < sz; i++)
