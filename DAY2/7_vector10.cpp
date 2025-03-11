@@ -15,11 +15,15 @@ int main()
 
 	v1.resize(8);
 
-	v1.push_back(0); // 이순간 size 는 9개
+	v1.push_back(0); // 끝에 한개 추가, 이순간 size 는 9개
 					 // 하지만 메모리 자체의 크기는 g++ 2배
 					 // vc : 1.5배
 
 	std::cout << v1.size() << std::endl; // 9개
 	std::cout << v1.capacity() << std::endl; // 12개
 											 // g++ 은 16
+
+	v1.push_back(0); // 현재 상태는 size < capacity 이므로
+					// 새로운 메모리 할당 필요 없습니다.
+					// 아주 빠르게 동작합니다.
 }
