@@ -29,9 +29,9 @@ int main()
 	// 즉, 대입 보다는 초기화가 좋습니다.
 
 
-	// #3. const 라 reference 는 초기화는 되지만 대입은 안됩니다.
+	// #3. const  와 reference 는 초기화는 되지만 대입은 안됩니다.
 	const int c1 = 10; // ok. 초기화
 
-	const int c2;
-	c2 = 10;	// error. 대입 안됨. 
+	const int c2;	// error
+	c2 = 10;		// error. 대입 안됨. 
 }
