@@ -19,3 +19,23 @@ int main()
 	f1(x);
 	f2(x);
 }
+
+// C++ 에서 함수 인자를 만드는 방법 - 반드시 외우고 규칙대로 하세요
+
+// 1. 인자의 값을 읽기만 하려고 한다.(in parameter)
+// 
+// => 인자의 타입이 primitive type 인 경우(int, double등)
+//    => call by value
+//    => void foo(int value)
+
+// => 인자의 타입이 user define type 인 경우(구조체, class)
+//    => const reference
+//    => void foo(const Rect& rc)
+
+
+// 2. 인자의 값을 수정하려고 합니다.(in out paramter
+//    => 포인터   사용 : void inc1(int* p) { ++(*p);}
+//    => 레퍼런스 사용 : void inc2(int& t) { ++r;}
+
+// => 레퍼런스 권장. 안전하고, 가독성이 좋은 코드
+
