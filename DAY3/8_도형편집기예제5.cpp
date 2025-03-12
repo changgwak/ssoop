@@ -12,7 +12,7 @@ class Shape
 {
 	int color = 0;
 public:
-
+	void draw() const { std::cout << "draw shape\n"; }
 };
 
 class Rect : public Shape
