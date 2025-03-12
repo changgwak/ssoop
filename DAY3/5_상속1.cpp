@@ -10,6 +10,13 @@
 // C#     : class Student : Person
 // Python : class Student ( Person )
 // Java   : class Student extends Person
+// 
+// Rust   : 상속 문법 없음
+
+// 용어
+// Person  : Base(기반) class,   Super class,  Parent class
+// Student : Derived(파생)class, Sub   class,  Child  class
+
 
 class Person
 {
