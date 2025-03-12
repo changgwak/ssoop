@@ -34,12 +34,21 @@ int main()
 	Car c1;
 	Car c2;
 
+
 	// #5. C++ 에서는 static 멤버 데이타는 2가지 방법으로 접근 가능
 	// => 클래스이름::멤버이름
 	// => 객체이름.멤버이름
+
 	std::cout << Car::cnt << std::endl;
 	std::cout << c1.cnt << std::endl;
 	std::cout << c2.cnt << std::endl;
+
 	//	=> 위 3줄은 모두 같은 메모리 접근하는 코드
+
+	// 클래스 이름을 사용하는 것을 권장
+	// => 객체이름 사용시, 객체자체의 특성으로 오해 할수 있다.
+
+	// Java, C#, swift, python, Rust 등의 대부분의 언어
+	// => "클래스 이름으로만" 접근 가능
 }
 
