@@ -55,6 +55,7 @@ int main()
 	Date d4 = today.tomorrow();
 
 	// 윤년인지 알고 싶다.
+	// => 아래 2가지 방법 모두 제공하는 것이 좋습니다.
 	// 방법 #1.
 	bool b1 = today.is_leap_year();
 
