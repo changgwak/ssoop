@@ -34,6 +34,6 @@ int main()
 }
 
 
-// 핵심 
+// 핵심 - 118page, 119
 // static member function 에서는
 // static memebr (data, function) 만 사용가능한다.
