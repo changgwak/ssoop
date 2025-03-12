@@ -8,12 +8,21 @@
 
 class Rect
 {
+//	int x, y, w, h, 생성자... 등은 생략, 있다고 가정 
 public:
 	void draw() const { std::cout << "draw rect\n"; }
 };
 
+class Circle
+{
+public:
+	void draw() const { std::cout << "draw circle\n"; }
+};
+
 int main()
 {
+	std::vector<Rect*> v1;
+	std::vector<Circle*> v2;
 }
 
 
