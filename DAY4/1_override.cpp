@@ -19,11 +19,14 @@ public:
 	// => 컴파일러는 새로운 가상함수를 추가했다고 생각하게 됩니다.
 	// virtual void Draw() {}
 
+
 	// #3. #2 가 많은 버그의 원인이 되었습니다
 	// 그래서 C++11 에서 "override" 라는 키워드가 도입되었습니다
 	// => 새로운 함수가 아니라, 기존 함수를 override 한다고 알리는 것
-	virtual void Draw() override {}
+//	virtual void Draw() override {} // 함수 이름이 다르므로 error
+	virtual void draw() override {} // ok
 
+	// public override void draw() {} // java, C#
 };
 
 
