@@ -41,14 +41,26 @@ int main()
 			// => 조사 방법은 내일 배우게 됩니다.
 			for (auto s : v)
 			{
-				if ( s가 Rect 를 가리키면 )
+				if (s가 Rect 를 가리키면)
+				{
 					static_cast<Rect*>(s)->draw();
-				
+				}				
 				else if (s가 Circle 를 가리키면)
+				{
 					static_cast<Circle*>(s)->draw();
+				}
 			}
 		}
 	}
 }
+
+// OCP 원칙
+// 기능 확장에는 열려있고(Open, 나중에 클래스가 추가되어도)
+// 코드 수정에는 닫혀있어야(Close, 기존 코드는 수정되지 않도록)
+// 만들어야 한다는 원칙(Priciple)
+
+// Open Close Principle(개방 폐쇄의 법칙)
+
+// 위코드는 OCP를 만족할수 없는 "나쁜 디자인" 입니다.
 
 
