@@ -40,6 +40,12 @@ public:
 	virtual void draw() const { std::cout << "draw circle\n"; }
 };
 
+class Triangle : public Shape
+{
+public:
+	virtual void draw() const { std::cout << "draw triangle\n"; }
+};
+
 int main()
 {
 	std::vector<Shape*> v;
@@ -56,11 +62,27 @@ int main()
 		{
 			for (auto s : v)
 			{
-				s->draw();
+				s->draw(); // 이 한줄의 코드는
+							// "동일한 표현식(코드) 이지만
+							//  상황(실제객체)에 따라 다르게 동작합니다."
+							// => 다형성(polymorphism) 이라고 합니다.
+
+				// 객체지향 프로그래밍의 3가지 특징 
+				// => 캡슐화(private, public)
+				// => 상속
+				// => 다형성(polymorphism)
+
+				// 다형성은 OCP 를 만족하는 아주 좋은 코딩 스타일입니다.
+				// => 결국 "가상함수" 가 중요
 			}
 		}
 	}
 }
 
+// Shape* s = &Rect; 일때
 
+// s로는 Rect 가 추가한 멤버에 접근 안됩니다.
+// 
+// 1. Rect 가 추가한 멤버 데이타 접근 :
+// 2. Rect 가 추가한 멤버 함수   접근 :
 
