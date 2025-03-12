@@ -1,11 +1,15 @@
 // 148 page ~
 #include <iostream>
 
+// 핵심 : 상속 문법을 사용한다면
+//        기반 클래스의 소멸자는 "반드시 virtual" 로 하세요
+//        => 가상 소멸자 라고 불리는 문법 입니다.
+
 class Base
 {
 public:
 	Base()  {  }
-	~Base() {  }
+	virtual ~Base() {  }
 };
 class Derived : public Base
 {
