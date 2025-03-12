@@ -38,14 +38,28 @@ int main()
 
 	Date d2 = d1.after_days(1000); // 1000일 뒤의 날짜를 알고 싶다.
 
-
+	//------------------------------------
 	// 5월이 몇일까지 있는지 알고 싶다. - 복습시 구현해 보세요
+	// => 2번이 좋습니다
 	// 방법 #1.
 	Date d3(2025, 5, 1);
-	int n1 = d3.days_in_month(5);
+	int n1 = d3.days_in_month();
 
 	// 방법 #2.
 	int n2 = Date::days_in_month(5);
+
+	// 내일 날짜를 알고 싶다.
+	// => 내일은 "오늘이라는 기준날짜필요"
+	// => non-static!
+	Date today(2025, 3, 12);
+	Date d4 = today.tomorrow();
+
+	// 윤년인지 알고 싶다.
+	// 방법 #1.
+	bool b1 = today.is_leap_year();
+
+	// 방법 #2.
+	bool b2 = Date::is_leap_year(2025);
 
 
 }
