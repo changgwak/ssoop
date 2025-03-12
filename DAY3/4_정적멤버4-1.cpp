@@ -6,12 +6,14 @@ class Car
 public:
 	void set(int c, int s)		// void set(Car* this, int c, int s)
 	{
-		color = c;
-		speed = c;
+		color = c;	// this->color = c;
+		speed = c;  // this->speed = s; 로 변경됩니다.
 	}
 	// 핵심 : static member function 은 this 가 추가되지 않은 멤버 함수 입니다.
 	static void foo(int c, int s) // void foo(int c, int s)
 	{
+		color = c; // this->color = c 가 되어야 하는데 ? this 가 없습니다.
+		speed = c; // ?
 	}
 };
 int main()
