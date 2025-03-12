@@ -32,7 +32,7 @@ public:
 		std::cout << x << ", " << y << std::endl;
 	}
 	// 상수 멤버함수의 explicit object parameter는 아래 처럼
-	void print1(this const Point& self) 
+	void print2(this const Point& self) 
 	{
 		std::cout << self.x << ", " << self.y << std::endl;
 	}
