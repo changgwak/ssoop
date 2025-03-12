@@ -13,15 +13,33 @@ class Derived : public Base
 {
 	int data2 = 0;
 public:
-	Derived()       { std::cout << "Derived()" << std::endl; } 
-	Derived(int a)  { std::cout << "Derived(int)" << std::endl; }
-	~Derived()      { std::cout << "~Derived()" << std::endl; }
+	// 상속에서 생성자 호출의 정확한 원리
+	Derived()       
+	{ 
+		// call Base::Base() <== 컴파일러가 추가한 코드
+
+		std::cout << "Derived()" << std::endl; 
+	} 
+
+	Derived(int a)  
+	{ 
+		// call Base::Base() <== 컴파일러가 추가한 코드는 항상
+		//						 디폴트 생성자 호출
+		std::cout << "Derived(int)" << std::endl; 
+	}
+	~Derived()      
+	{ 
+		std::cout << "~Derived()" << std::endl; 
+
+		// 소멸자는 Derived 구현이 먼저 실행된후, 기반 클래스 소멸자 호출
+		// call Base::~Base()
+	}
 };
 
 int main()
 {
-	Derived d;	
-//	Derived d(5);
+	Derived d1;			// call Derived::Derived()
+//	Derived d2(5);		// call Derived::Derived(int)
 }
 
 
