@@ -19,11 +19,13 @@ public:
 
 int main()
 {
-	Animal a; a.Cry1(); 
-	Dog    d; d.Cry1(); 
+	Animal a; a.Cry1(); // Animal Cry1
+	Dog    d; d.Cry1(); // Dog    Cry1
 
 	Animal* p = &d;		
 
-	p->Cry1();
+	// 실제 객체는 Dog, 
+	// 포인터 타입은 Animal*
+	p->Cry1(); // ?
 }
 
