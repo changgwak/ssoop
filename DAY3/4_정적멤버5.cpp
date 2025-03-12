@@ -26,7 +26,8 @@ public:
 		std::cout << this; // 8. error. 객체 주소. 객체가 있어야 한다.
 	}
 };
-int Car::cnt;
+int Car::cnt; // 결국 전역변수, 
+				// 전역변수는 초기값 생략시, 0 으로 자동 초기화
 
 int main()
 {
