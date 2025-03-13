@@ -10,7 +10,15 @@ class Point
 	int y;
 public:
 	Point(int x = 0, int y = 0) : x(x), y(y) {}
+
+	friend std::ostream& operator<<(std::ostream& os, const Point& p);
 };
+
+std::ostream& operator<<(std::ostream& os, const Point& p)
+{
+	os << p.x << ", " << p.y;
+	return os;
+}
 
 int main()
 {
