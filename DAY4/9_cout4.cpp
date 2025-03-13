@@ -14,10 +14,9 @@ namespace std
 	
 		ostream& operator<<(ostream&(*f)(ostream&) )
 		{ 
-			? ;
+			f(*this); // std::endl(std::cout)
 			return *this; 
 		}
-
 	};
 	ostream cout;
 
@@ -35,8 +34,7 @@ int main()
 	std::endl( std::cout ); // ok.. endl 은 함수 입니다.
 							// 이 코드가 위와 동일합니다.
 
-
-	std::cout << std::endl; // cout.operator<<( ? )
+	std::cout << std::endl; // cout.operator<<( std::endl )
 }
 
 
