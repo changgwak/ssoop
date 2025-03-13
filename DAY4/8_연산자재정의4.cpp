@@ -11,7 +11,9 @@ public:
 
 	// 멤버 함수로 만든 operator+
 	// + 은 이항연산자 이지만 멤버 함수로 만들면 인자가 한개가 됩니다.
-	Point operator+(const Point& p)
+	// "p1 + p2" 에서 p1이 const 라도 호출가능해야 합니다.
+	// => const member function 으로!
+	Point operator+(const Point& p) const
 	{
 		Point tmp(x + p.x, y + p.y);
 		return tmp;
