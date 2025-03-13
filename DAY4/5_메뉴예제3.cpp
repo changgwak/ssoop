@@ -21,14 +21,30 @@ public:
 	}
 };
 
+class PopupMenu
+{
+	std::string title;
+	std::vector<MenuItem*> v;
+public:
+	PopupMenu(const std::string& title) : title(title) {}
+
+	void add(MenuItem* m) { v.push_back(m); }
+	
+	// 팝업메뉴를 선택할때 동작 - 핵심!
+	void command()
+	{
+
+	}
+};
+
+
 
 int main()
 {
 	MenuItem m1("김밥", 11);
 	MenuItem m2("라면", 12);
 	MenuItem m3("우동", 13);
-
-	
+		
 	PopupMenu pm("오늘의 점심 메뉴");
 	pm.add(&m1);
 	pm.add(&m2);
