@@ -52,10 +52,10 @@ public:
 
 
 			if (cmd == sz + 1) // 종료 메뉴 선택 
-				? ;
+				break;
 
 			if (cmd < 1 || cmd > sz + 1) // 잘못된 입력
-				? ;
+				continue;
 
 
 
