@@ -87,10 +87,12 @@ int main()
 
 	root->add(pm1);
 	root->add(pm2);
+//	pm1->add(pm2);
 
 	pm1->add(new MenuItem("RED", 11));
 	pm1->add(new MenuItem("GREEN", 12));
 	pm1->add(new MenuItem("BLUE", 13));
+	pm1->add(new MenuItem("WHITE", 14));
 
 	pm2->add(new MenuItem("HD", 21));
 	pm2->add(new MenuItem("FHD", 22));
@@ -98,6 +100,19 @@ int main()
 
 	// 이제 메뉴를 시작하려면 ??
 	root->command();
-
 }
 
+// 현실세계에서 세상은 다양한 객체(사람, 자동차, 컴퓨터, 기차등...)의 집합 입니다.
+
+// 객체 지향 프로그래밍 관점에서 프로그래밍 이란 ?
+
+// 1. 객체를 생성하고
+// 2. 객체간의 관계를 설정하고
+// 3. 객체간의 메세지를 주고 받는 과정이다(서로의 멤버 함수 호출)
+
+// 4. 프로그램의 기본 단위는 "함수"가 아니라 "클래스" 이다.
+
+// 장점 : 유연성이 좋고, 유지보수가 쉽다.
+
+// 단점 : 메모리 사용량이 C 보다 많고, 복잡하다.
+//		  결정적으로.. 어렵다!!
