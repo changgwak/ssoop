@@ -18,12 +18,14 @@ typedef void FOO();	// FOO 는 함수  타입
 typedef void(*F)();	// F 는 함수 포인터  타입
 typedef int(*P)[2];	// P 는 배열을 가리키는 포인터  타입
 
+// using ARR = int[2];
+
 int main()
 {
 	A n1 = 10;
 	D d1 = 2.3;
 
-	ARR x = { 1,2 };
+	ARR x = {1,2};
 
 	F f1 = nullptr; // f 는 함수 포인터 타입.
 					// void(*f1)() = nullptr;
