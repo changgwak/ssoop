@@ -5,6 +5,8 @@ class Shape
 {
 	int color = 0;
 public:
+	virtual ~Shape() {}
+
 	void set_color(int c) { color = c; }
 
 	// 가상함수    : 파생 클래스가 override 하지 않으면 기본 구현 물려주겠다는 것
@@ -26,20 +28,14 @@ public:
 class Rect : public Shape
 {
 public:
-	virtual void draw() const { std::cout << "draw rect\n"; }
+	void draw() const override { std::cout << "draw rect\n"; }
 };
 
 
 class Circle : public Shape
 {
 public:
-	virtual void draw() const { std::cout << "draw circle\n"; }
-};
-
-class Triangle : public Shape
-{
-public:
-	virtual void draw() const { std::cout << "draw triangle\n"; }
+	void draw() const override { std::cout << "draw circle\n"; }
 };
 
 int main()
