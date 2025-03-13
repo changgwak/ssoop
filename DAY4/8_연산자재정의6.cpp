@@ -52,6 +52,7 @@ public:
 	// => 등호의 왼쪽에 올수 있게 하기 위해 reference 로 반환
 	//    "v[0] = 10"
 	int& operator[](int idx) { return ptr[idx]; }
+
 };
 
 int main()
