@@ -21,13 +21,10 @@ public:
 	void command()
 	{
 		std::cout << get_title() << "메뉴 선택됨\n";
+
 		_getch(); // 아무키나 누를때 까지 잠시 정지
 	}
 };
-
-
-
-
 
 
 int main()
