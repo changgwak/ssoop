@@ -21,7 +21,8 @@ int main()
 	// 
 	// 2. 피연산자 중 한개라고 user define type 이면 약속된 함수 호출
 
-	Point p3 = p1 + p2;
+	Point p3 = p1 + p2;	// operator+(p1, p2) 또는 
+						// p1.operator+(p2)  를 찾게 된다.
 
 
 }
