@@ -22,7 +22,7 @@ public:
 
 	// 모든 메뉴는 선택될수 있다(command)
 	// => 파생 클래스의 공통의 특징은 기반 클래스에도 있어야 한다.
-	virtual void command() {} ? = 0;
+	virtual void command() = 0;
 };
 
 
@@ -76,7 +76,9 @@ public:
 
 
 
-			v[cmd - 1]->command();
+			v[cmd - 1]->command(); // 다형성. polymorphism
+						// v[cmd-1] 이 MenuItem 인지
+						//			   PopupMenu 인지에 따라 다르게 동작
 		}
 
 	}
