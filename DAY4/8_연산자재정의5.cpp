@@ -32,7 +32,9 @@ int main()
 	Point p1(1, 1);
 	Point p2(2, 2);
 
-	Point p3 = p1 + p2;	// p1.operator+(p2)
+	Point p3 = p1 + p2;	// error.
+						// 멤버 버전 또는 일반 함수 버전 중에서
+						// 한개만 제공해야 한다.
 
 
 	p3.print();
