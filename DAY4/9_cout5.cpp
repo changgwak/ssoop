@@ -16,6 +16,8 @@ public:
 
 std::ostream& operator<<(std::ostream& os, const Point& p)
 {
+	// 여기서 os 는 "std::cout" 별명입니다
+
 	os << p.x << ", " << p.y;
 	return os;
 }
@@ -32,7 +34,14 @@ int main()
 					// operator<<(std::ostream, Point) 가 있으면 됩니다.
 					
 					
-					
+	// cout 의 별명을 만들때는 non-const 로 해야 합니다.
+	
+	std::ostream& o1 = std::cout; // ok o1 은 << 사용가능
+	const std::ostream& o2 = std::cout; // o2 는 << 사용못함
+
+	o1 << "hello"; // ok
+	o2 << "hello"; // error.   o2.operator<<() 인데, 
+					// operator<<() 가 상수 함수 아님.
 }
 
 
