@@ -8,12 +8,15 @@ namespace std
 {
 	class ostream
 	{
-	};
+	public:
+		void operator<<(int n)         { printf("%d", n); }
+		void operator<<(double d)      { printf("%lf", d); }
+		void operator<<(const char* s) { printf("%s", s); }
 
+		// 이외에도 모든 표준타입에 대해서 "operator<<" 제공..
+	};
 	ostream cout;
 }
-
-
 int main()
 {
 	int    n = 10;
