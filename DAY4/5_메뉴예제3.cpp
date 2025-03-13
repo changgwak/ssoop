@@ -33,7 +33,21 @@ public:
 	// 팝업메뉴를 선택할때 동작 - 핵심!
 	void command()
 	{
+		auto sz = v.size();
 
+		for (int i = 0; i < sz; i++)
+		{
+			std::cout << i + 1 << ". " << v[i]->get_title() << std::endl;
+		}
+
+		std::cout << sz + 1 << ". 종료\n";
+
+		std::cout << "메뉴를 선택하세요 >> ";
+
+		int cmd;
+		std::cin >> cmd;
+
+		v[cmd - 1]->command(); // 선택된 메뉴 아이템 실행
 	}
 };
 
