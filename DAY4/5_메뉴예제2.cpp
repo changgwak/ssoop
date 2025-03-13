@@ -9,11 +9,26 @@ class MenuItem
 	std::string title;
 	int id;
 //	std::string shortcut; // 나중에 복습할때 추가해 보세요
+
 public:
 	MenuItem(const std::string& title, int id)
 		: title(title), id(id) { }
 
+	std::string get_title() const { return title; }
+
+
+	// 메뉴 선택시 호출할 함수
+	void command()
+	{
+		std::cout << get_title() << "메뉴 선택됨\n";
+		_getch(); // 잠시 정지
+	}
 };
+
+
+
+
+
 
 int main()
 {
