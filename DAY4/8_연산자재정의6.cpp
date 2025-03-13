@@ -20,7 +20,7 @@ public:
 	}
 	~Vector() { delete[] ptr; }
 
-	int& at(int idx) { return ptr[idx]; }
+
 
 
 	void resize(int new_size)
@@ -43,15 +43,20 @@ public:
 			
 		}
 	}
+
+	int& at(int idx) { return ptr[idx]; }
+	int& operator[](int idx) { return ptr[idx]; }
 };
-
-
-
 int main()
 {
 	Vector v(4, 0);
 
-	v.at(0) = 10;
+//	v.at(0) = 10;
+//	std::cout << v.at(0) << std::endl; // 10
 
-	std::cout << v.at(0) << std::endl; // 10
+	v[0] = 10; // v.operator[](0) = 10; 로 해석됩니다.
+	std::cout << v[0] << std::endl;
+
+
+	
 }
