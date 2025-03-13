@@ -45,8 +45,15 @@ public:
 	}
 
 	int& at(int idx) { return ptr[idx]; }
+
+	// [] 연산자 재정의
+	// => 객체를 배열 처럼 사용가능하게 하기 위해 사용
+	// => 멤버 함수로만 구현 가능(non-member 는 안됨)
+	// => 등호의 왼쪽에 올수 있게 하기 위해 reference 로 반환
+	//    "v[0] = 10"
 	int& operator[](int idx) { return ptr[idx]; }
 };
+
 int main()
 {
 	Vector v(4, 0);
@@ -57,6 +64,7 @@ int main()
 	v[0] = 10; // v.operator[](0) = 10; 로 해석됩니다.
 	std::cout << v[0] << std::endl;
 
-
+	v.operator[](1) = 10; // 이렇게 사용해도 됩니다.
+						  // 일반적으로 이렇게  사용하지는 않지만...
 	
 }
