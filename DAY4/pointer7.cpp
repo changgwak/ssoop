@@ -1,6 +1,6 @@
 // 아래 ?모두 채우세요
 
-void f1(int* p1)
+void f1(int *p1)
 {
 	// p1 은 1차 배열처럼 사용
 	p1[0] = 10;
@@ -29,3 +29,24 @@ int main()
 	int(*p)[2][2] = &y;  // 포인터
 	int(&r)[2][2] = y;  // 레퍼런스
 }
+
+// const char* s = "abc"  // "abc" const char[3];
+						  // const char [3] => const char* 
+//					
+
+// const int* a = { 1, 2 , 3}
+//				 int x[3]
+//				 int x[3] => int* 
+//				 이름없는 배열은 포인터로 암시적형변환되지 않는다.
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	// 모든 리터럴은 rvalue 이고 주소를 구할수 없습니다.
+	// 그런데, 문자열 리터럴은 lvalue 이고 주소를 구할수 있습니다
+	printf("%p\n", &"aaa"); // ok
+	printf("%p\n", &10);    // error
+}
+*/
