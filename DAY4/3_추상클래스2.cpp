@@ -13,6 +13,12 @@ public:
 //	virtual void draw() const { std::cout << "draw shape\n"; }
 	virtual void draw() const = 0;
 
+
+	// 아래 처럼 했다면
+	// => 모든 도형 설계자는 반드시 아래 함수를 구현해야 합니다.
+	// virtual int get_area() const = 0;
+
+	// 아래 처럼 했다면 모든 도형 클래스가 반드시 구현할 필요는 없습니다.
 	virtual int get_area() const { return -1; }
 };
 
