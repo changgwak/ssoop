@@ -1,7 +1,5 @@
-void foo(int a)
-{
-
-}
+void foo(int a) {}
+int goo(int a, double d) {}
 
 int main()
 {
@@ -13,6 +11,11 @@ int main()
 	int n = 0;
 	double d = 0;
 
-	? p1 = n;
-	? p2 = d;
+	int* p1 = &n;
+	int* p2 = &d;
+
+	// foo 함수의 주소를 담는 포인터 변수 p3 만드세요
+	void (*p3)(int) = &foo;
+
+	// goo 함수 주소를 담는 포인터 변수 p4 만드세요
 }
