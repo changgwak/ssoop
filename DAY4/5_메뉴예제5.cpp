@@ -77,8 +77,9 @@ public:
 
 
 			v[cmd - 1]->command(); // 다형성. polymorphism
-						// v[cmd-1] 이 MenuItem 인지
-						//			   PopupMenu 인지에 따라 다르게 동작
+						// v[cmd-1] 이 가리키는 실제 객체가
+						// MenuItem 인지
+						// PopupMenu 인지에 따라 다르게 동작
 		}
 
 	}
