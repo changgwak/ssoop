@@ -9,6 +9,8 @@ namespace std
 	class ostream
 	{
 	public:
+		// 실제 화면 출력은 아래 처럼 "printf" 가 아니고
+		// 각 OS 의 시스템콜 사용합니다(복잡한 코드)
 		void operator<<(int n)         { printf("%d", n); }
 		void operator<<(double d)      { printf("%lf", d); }
 		void operator<<(const char* s) { printf("%s", s); }
