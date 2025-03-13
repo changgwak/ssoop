@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <conio.h>
 // 프로그램에서 필요한 타입을 먼저 설계 한다.
 
 class MenuItem
@@ -21,7 +21,7 @@ public:
 	void command()
 	{
 		std::cout << get_title() << "메뉴 선택됨\n";
-		_getch(); // 잠시 정지
+		_getch(); // 아무키나 누를때 까지 잠시 정지
 	}
 };
 
