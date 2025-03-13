@@ -11,6 +11,13 @@ namespace std
 		ostream& operator<<(int n) { printf("%d", n);  return *this; }
 		ostream& operator<<(double d) { printf("%lf", d); return *this; }
 		ostream& operator<<(const char* s) { printf("%s", s);  return *this; }
+	
+		ostream& operator<<(ostream&(*f)(ostream&) )
+		{ 
+			? ;
+			return *this; 
+		}
+
 	};
 	ostream cout;
 
@@ -29,7 +36,7 @@ int main()
 							// 이 코드가 위와 동일합니다.
 
 
-
+	std::cout << std::endl; // cout.operator<<( ? )
 }
 
 
