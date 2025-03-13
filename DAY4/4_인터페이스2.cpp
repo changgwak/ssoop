@@ -13,38 +13,32 @@ public:
 	virtual void take() = 0;
 };
 
+// 실제 카메라는 아직 없지만 규칙은 있습니다.
+// 사용자는 규칙대로만 사용하면 됩니다.
 
+class People
+{
+public:
+	void use_camera(ICamera* c) { c->take(); }
+};
 
+// 모든 카메라 제작자는 규칙대로 만들어야 합니다
 
-
-
-
-
-
-
-
-
-
-
-
-
-class Camera
+class Camera : public ICamera
 {
 public:
 	void take() { std::cout << "take picture" << std::endl; }
 };
 
-class HDCamera
+class HDCamera : public ICamera
 {
 public:
 	void take() { std::cout << "take HD picture" << std::endl; }
 };
-
-class People
+class UHDCamera : public ICamera
 {
 public:
-	void use_camera(Camera* c) { c->take(); }
-	void use_camera(HDCamera* c) { c->take(); }
+	void take() { std::cout << "take UHD picture" << std::endl; }
 };
 
 int main()
@@ -56,6 +50,9 @@ int main()
 
 	HDCamera hc;
 	p.use_camera(&hc); 
+
+	UHDCamera uhc;
+	p.use_camera(&uhc);
 }
 
 
