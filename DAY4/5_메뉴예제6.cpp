@@ -88,14 +88,16 @@ int main()
 	root->add(pm1);
 	root->add(pm2);
 
-	pm1->add(new MenuItem("RED",   11));
+	pm1->add(new MenuItem("RED", 11));
 	pm1->add(new MenuItem("GREEN", 12));
-	pm1->add(new MenuItem("BLUE",  13));
+	pm1->add(new MenuItem("BLUE", 13));
 
-	pm2->add(new MenuItem("HD",  21));
+	pm2->add(new MenuItem("HD", 21));
 	pm2->add(new MenuItem("FHD", 22));
 	pm2->add(new MenuItem("UHD", 23));
 
 	// 이제 메뉴를 시작하려면 ??
-	?
+	root->command();
+
 }
+
