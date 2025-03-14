@@ -22,7 +22,10 @@ int main()
 	//		lambda introducer
 
 	auto ret2 = std::find_if(v.begin(), v.end(),  
-					[](int n) { return n % 3 == 0; } );
+					[](int n){ return n % 3 == 0; } );
+//					[](int n) ->bool { return n % 3 == 0; } );
+							// 반환 타입 생략가능한데
+							// 표기하려면 이렇게!
 
 
 }
