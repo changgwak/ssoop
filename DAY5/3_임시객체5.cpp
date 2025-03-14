@@ -1,12 +1,11 @@
 #include <iostream>
 
 // 중요한 예제!!. 반드시 이해 하세요
-
 class Counter
 {
 	int cnt = 0;
 public:
-//	Counter increment()
+	Counter increment()
 	Counter& increment()
 	{
 		
@@ -31,6 +30,7 @@ int main()
 
 	std::cout << "---------------------------------\n";
 	c.increment().increment().increment();
+	// increment(&c)
 	std::cout << "---------------------------------\n";
 
 	std::cout << c.get() << std::endl;
