@@ -6,7 +6,8 @@ class Counter
 {
 	int cnt = 0;
 public:
-	Counter increment()
+//	Counter increment()
+	Counter& increment()
 	{
 		++cnt;
 		return *this;
@@ -34,3 +35,8 @@ int main()
 	std::cout << c.get() << std::endl;
 }
 // 170page 마지막 단락에 별표하고 "임시객체5.cpp" 예제 참고 적어 두세요
+
+// *this 반환시
+
+// 값 반환 : 임시객체 생성됨
+// 참조 반환 : 임시객체 생성안됨 - "임시객체5.cpp" 예제 참고
