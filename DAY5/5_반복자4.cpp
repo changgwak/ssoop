@@ -19,19 +19,21 @@ int main()
 	// 2. 반복자 사용, 모든 컨테이너 사용가능
 
 	auto first = c.begin();
-	auto last = c.end();
+	auto last  = c.end();
 
 	while (first != last)
 	{
-		auto e = *first;
+		int e = *first;
 		std::cout << e << std::endl;
-
 		++first;
 	}
 
 
-
-
 	// 3. [] 연산자 사용 - vector, deque만 가능, list 안됨
+	for (int i = 0; i < c.size(); i++)
+	{
+		std::cout << c[i] << std::endl; // c 가 list 라면 에러.
+									// vector 라면 이 코드도 권장
+	}
 }
 
