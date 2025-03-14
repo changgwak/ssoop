@@ -29,7 +29,7 @@ int main()
 
 	std::vector< int > v1(10);
 
-	v1[0] = ? ;
+	v1[0] = 10; // v1은 int 값 보관
 
 
 	std::vector< std::list<int> > v2(10);
@@ -40,4 +40,12 @@ int main()
 
 	v2[1].push_back(10);
 	v2[1].push_back(20);
+
+	
+	std::vector<std::vector<int>> v3(10);
+
+
+	v3[0].resize(10);
+	v3[1].resize(5);
+	v3[2].push_back(1);
 }
