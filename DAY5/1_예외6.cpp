@@ -12,12 +12,21 @@ int main()
 
 	try
 	{
-		//	v[10] = 10;			
-		v.at(10) = 10;
+		v[10] = 10;			
+		//v.at(10) = 10;
 	}
 	catch (const std::out_of_range& e)
 	{
 		std::cout << "예외발생\n";
+	}
+
+	for (int i = 0; i < v.size(); i++)
+	{
+		// 다음중 좋은 코드는 ?
+		// => index 가 잘못될 확률이 없습니다.
+		// => 1번 사용하세요. 
+		v[i] = 0;		// 1
+		v.at(i) = 0;	// 2
 	}
 
 }
