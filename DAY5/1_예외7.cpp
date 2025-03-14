@@ -27,4 +27,13 @@ int main()
 
 	std::cout << b1 << std::endl;
 	std::cout << b2 << std::endl;
+
+	if (noexcept(goo()))
+		goo(); // 예외 없다면 사용
+	else
+	{
+		// 느리더라도 안전한 함수 사용
+	}
+	std::pair<int, int> p; // pair 에 마우스 올리고 오른쪽 버튼 클릭
+							// "정의로 이동" 선택
 }
