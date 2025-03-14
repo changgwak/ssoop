@@ -31,7 +31,7 @@ int main()
 	
 	auto ret2 = std::find_if(v.begin(), v.end(), foo );
 
-	if (ret2 != v.end())
+	if (ret2 == v.end())
 	{
 	}
 	else
