@@ -16,6 +16,9 @@ void foo()
 
 // => 단, 정확히 알때만 표기하세요, 잘 모르면 표기하지 마세요
 void goo() noexcept 
+//void goo() noexcept(true) // 위와 동일
+//void goo() noexcept(false) // 예외 있다는 것
+//void goo() noexcept( 다양한 조사를 통해서 결정할수도 있다. ) 
 {
 }
 
