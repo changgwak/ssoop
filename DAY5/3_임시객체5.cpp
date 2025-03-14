@@ -9,6 +9,7 @@ public:
 //	Counter increment()
 	Counter& increment()
 	{
+		
 		++cnt;
 		return *this;
 	}
@@ -40,3 +41,14 @@ int main()
 
 // 값 반환 : 임시객체 생성됨
 // 참조 반환 : 임시객체 생성안됨 - "임시객체5.cpp" 예제 참고
+/*
+int n = 0;
+int* p = &n; // 포인터 변수는 주소로 초기화
+int& r = n;  // 참조는 이름으로 초기화
+
+int& r1 = p; // error. 참조 초기화를 포인터로 할수 없음
+int& r2 = *p; // ok. p 가 포인터 이므로 *p 는 값!!!!
+
+Point& r3 = this; // error
+Point& r4 = *this; // ok
+*/
