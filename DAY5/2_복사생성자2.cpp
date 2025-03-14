@@ -18,7 +18,6 @@ public:
 void f1(Point  p) {} // call by value : 복사본 생성
 void f2(Point& p) {} // call by reference : 복사본 생성 안됨
 
-
 Point pt(1, 1);
 
 Point  f3()		// return by value
@@ -27,7 +26,11 @@ Point  f3()		// return by value
 	// 복사본이 만들어져서 리턴 됩니다.
 }
 
-Point& f4() { return pt; }
+Point& f4() // return by reference
+{ 
+	return pt; // 복사본을 만들지 말고
+				// 별명으로 반환해 달라.
+}
 
 int main()
 {
@@ -47,7 +50,14 @@ int main()
 
 
 	// #3. 함수가 객체를 값으로 반환 할때
-	f3();
+	// f3();	// 복사본 반환. 복사본 만들때 복사 생성자 호출
+
+	f4();	// 참조 반환이므로 복사 생성자 호출안됨.
 }
 //------------------------
 
+Point f5()
+{
+	Point p1(1, 1);
+	return p1;
+}
