@@ -16,11 +16,15 @@ int main()
 	// 단점 : 모든 컨테이너에 find 멤버 함수를 만들어야 한다. 
 //	s.find(3);
 
-
 	// 방법 2. find 를 일반 함수 템플릿으로 만들자
+	// 장점 : 한개의 non-member function(template) 으로 모든 컨테이너에서
+	//		 선형검색 가능
 
-	auto ret1 = std::find(s.begin(), s.end(), 3);
-	auto ret2 = std::find(v.begin(), v.end(), 3);
-	
-
+	// 단점 : 코드가 복잡해 보인다. 
+	auto ret1 = std::find( s.begin(), s.end(), 3 );
+	auto ret2 = std::find( v.begin(), v.end(), 3 );
 }
+
+// std::find 같은 일반함수(템플릿) 을 "알고리즘" 이라고 부릅니다.
+
+// STL 의 3대 요소 : Container, Iterator, Algorithm
