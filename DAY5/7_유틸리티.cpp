@@ -12,10 +12,17 @@
 int main()
 {
 	std::vector<int> v = { 1,2,3,4,5 }; // 파이썬 리스트
+	
 
-	std::tuple<int, double, char> t(1, 3.4, 'A'); // 튜플
+//	std::tuple<int, double, char> t(1, 3.4, 'A'); // 튜플 - C++11
+
+	std::tuple t(1, 3.4, 'A'); // C++17 부터 타입 생략 가능. 
+								// 옵션에서 C++버전 C++17 이상으로
 
 	// 접근이 어렵습니다.
 	std::cout << std::get<1>(t); // 3.4
+
+	// 'A' : 메모리에 65 만있습니다(아스키 코드)  char 타입
+	// "A" : 메모리에 65, 0 입니다. { 65, 0}     char[2] 타입
 }
 
