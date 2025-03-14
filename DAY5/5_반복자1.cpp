@@ -21,9 +21,13 @@ int main()
 	// ++ 연산으로 모든 요소 열거 가능합니다.
 	auto p2 = s.begin();
 
-	++p2;
+	// "p2" 가 반복자(iterator)입니다.
+	// => 사용법은 포인터와 동일
 
-	std::cout << *p2 << std::endl;
+//	++p2; // p2.operator++()
+	p2.operator++();
+
+	std::cout << *p2 << std::endl; // 2
 
 
 }
